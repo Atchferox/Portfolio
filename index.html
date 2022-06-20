@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://kit.fontawesome.com/fe3a509269.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/showMenu.js"></script>
+  </head>
+
+  <body>
+
+    <div class="side-navbar" id="myLinks">
+      <ul class="nav-items">
+        <li class="active"><a href="#home"><i class="fa-solid fa-house"></i>Home</a></li>
+        <li><a href="#about"><i class="fa-solid fa-user"></i>About</a></li>
+        <li><a href="#"><i class="fa-solid fa-box-archive"></i>Projects</a></li>
+        <li><a href="#"><i class="fa-solid fa-comment"></i>Contact</a></li>
+      </ul>
+      <h4>© 2022 Luuk Munneke</h4>
+    </div>
+
+    <main>
+      <div class="hero-wrapper" data-label="Home" id="home">
+
+        <i class="fa-solid fa-bars fa-2xl hamburger-icon" id="hamburger-button" onclick="handleButtonClick()"></i>
+
+        <div class="content">
+          <img src="./img/memoji2.png" alt="avatar">
+          <h1>Luuk Munneke</h1>
+          <div class="description">
+            <span>I'm a</span>
+            <span class="txt-rotate" data-period="2000" data-rotate='["Web Developer", "Swift", "React Native"]'>
+            </span>
+            <span>developer</span>
+          </div>
+          <div class="socials">
+            <i class="fa-brands fa-discord fa-xl discord"></i>
+            <i class="fa-brands fa-instagram fa-xl instagram"></i>
+            <i class="fa-brands fa-twitter fa-xl twitter"></i>
+          </div>
+          <button type="button" class="button">
+            Projects
+          </button>
+        </div>
+
+        <div class="scrolldown">
+          <p>Scroll down</p>
+          <lottie-player class="scroll-down-animation" src="https://assets4.lottiefiles.com/packages/lf20_m8cskkkk.json"
+            background="transparent" speed="1" loop autoplay>
+          </lottie-player>
+        </div>
+      </div>
+      </div>
+
+
+
+      <section class="about" data-label="About" id="about">
+        <div class="about-wrapper">
+          <div class="header">
+            <h2>About Me</h2>
+            <svg class="dot-background" width="26" height="26" viewBox="0 0 26 26" fill="none">
+              <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
+              <circle cx="2.5" cy="16.5" r="2.5" fill="#D9D9D9" />
+              <circle cx="2.5" cy="9.5" r="2.5" fill="#D9D9D9" />
+              <circle cx="2.5" cy="23.5" r="2.5" fill="#D9D9D9" />
+              <circle cx="16.5" cy="2.5" r="2.5" fill="#D9D9D9" />
+              <circle cx="16.5" cy="16.5" r="2.5" fill="#D9D9D9" />
+              <circle cx="16.5" cy="9.5" r="2.5" fill="#D9D9D9" />
+              <circle cx="16.5" cy="23.5" r="2.5" fill="#D9D9D9" />
+              <circle cx="9.5" cy="2.5" r="2.5" fill="#D9D9D9" />
+              <circle cx="9.5" cy="16.5" r="2.5" fill="#D9D9D9" />
+              <circle cx="9.5" cy="9.5" r="2.5" fill="#D9D9D9" />
+              <circle cx="9.5" cy="23.5" r="2.5" fill="#D9D9D9" />
+              <circle cx="23.5" cy="2.5" r="2.5" fill="#D9D9D9" />
+              <circle cx="23.5" cy="16.5" r="2.5" fill="#D9D9D9" />
+              <circle cx="23.5" cy="9.5" r="2.5" fill="#D9D9D9" />
+              <circle cx="23.5" cy="23.5" r="2.5" fill="#D9D9D9" />
+            </svg>
+          </div>
+          <div class="about-content-container">
+            <img class="memoji" src="./img/memoji2.png" alt="avatar">
+            <div class="about-content">
+              <p>Hi, I'm Luuk Munneke, an React Native developer from the Netherlands.
+                I'm a developer with a lot of passion for solving problems and helping people out.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="stats-container">
+          <ul class="stats">
+            <li>
+              <div class="stat">
+                <i class="fa-solid fa-laptop-code fa-xl"></i>
+                <div class="stat-content">
+                  <p class="number">3</p>
+                  <p>Projects Completed</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="stat">
+                <i class="fa-solid fa-code fa-xl"></i>
+                <div class="stat-content">
+                  <p class="number">4</p>
+                  <p>Languages Learned</p>
+                </div>
+              </div>
+
+            </li>
+            <li>
+              <div class="stat">
+                <i class="fa-solid fa-terminal fa-xl"></i>
+                <div class="stat-content d3">
+                  <p class="number">0</p>
+                  <p>Current Releases</p>
+                </div>
+              </div>
+
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <button class="go-to-top hidden" id="button-to-top" onclick="goToTop()"><i
+          class="fa-solid fa-arrow-up fa-xl"></i></button>
+    </main>
+
+    <script src="./js/toTopButton.js"></script>
+  </body>
+
+</html>
