@@ -1,8 +1,16 @@
 function handleButtonClick() {
 
   let navbar = document.getElementById("myLinks")
+  let navbarItems = document.querySelectorAll(".nav-item")
   let main = document.querySelector("main")
   let scrollContainer = document.querySelector(".scrolldown")
+  navbarItems.forEach(item => {
+    if (item.attributes.getNamedItem("data-label").value === 'home') {
+      if (!item.classList.contains("active")) {
+        item.classList.add("active")
+      }
+    }
+  })
 
   if (main.style.transform === '') {
     main.style.transform = 'translateX(290px)';
