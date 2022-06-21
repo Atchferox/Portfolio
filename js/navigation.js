@@ -18,7 +18,7 @@ function navigation() {
           }
 
         }
-      }, { threshold: 1 })
+      }, { threshold: 0.5 })
 
     sections.forEach(section => {
       observer.observe(section)
