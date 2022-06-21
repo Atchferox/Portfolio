@@ -13,8 +13,13 @@ function navigation() {
           let activeLink = document.querySelector('.active');
           let newLink = document.querySelector(`.nav-item[data-label=${visibleSection.target.id}]`)
           if (activeLink !== newLink) {
-            activeLink.classList.remove('active');
+
             newLink.classList.add('active');
+
+
+            setTimeout(() => {
+              activeLink.classList.remove('active');
+            }, 10)
           }
 
         }
@@ -32,8 +37,11 @@ function navigation() {
           let newLink = document.querySelector(`.nav-item[data-label=${visibleSection.target.id}]`)
           if (activeLink !== newLink) {
 
-            activeLink.classList.remove('active');
             newLink.classList.add('active');
+
+            setTimeout(() => {
+              activeLink.classList.remove('active');
+            }, 10)
           }
 
         }

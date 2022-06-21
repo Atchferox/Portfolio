@@ -46,6 +46,8 @@ li {
   height: 100vh;
   background-color: #353353;
   color: #f3f3f3;
+  -webkit-animation: fadeout 1s ease-in-out;
+          animation: fadeout 1s ease-in-out;
   border-right: 1px solid rgba(255, 255, 255, 0.25);
   flex-direction: column;
   justify-content: center;
@@ -57,13 +59,46 @@ li {
   letter-spacing: 0.025rem;
 }
 .side-navbar .nav-items li {
-  margin: 12px;
+  margin: 10px;
+  padding: 4px;
 }
 .side-navbar .nav-items li a i {
   margin-right: 10px;
 }
 .side-navbar .nav-items .active {
+  -webkit-animation: fadein 0.1s ease-in;
+          animation: fadein 0.1s ease-in;
   color: #417CD3;
+}
+@-webkit-keyframes fadein {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #417CD3;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+}
+@keyframes fadein {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #417CD3;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+}
+@-webkit-keyframes fadeout {
+  0% {
+    color: white;
+  }
+}
+@keyframes fadeout {
+  0% {
+    color: white;
+  }
 }
 .side-navbar h4 {
   position: absolute;
@@ -289,7 +324,7 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1rem));
   padding: 10px;
-  gap: 15px;
+  gap: 20px;
   justify-content: center;
   margin-bottom: 1rem;
 }
@@ -297,21 +332,15 @@ main {
   padding: 15px;
   width: 300px;
   height: 350px;
-  border-radius: 10px;
-  background-color: #353353;
-  color: white;
+  border-radius: 20px;
+  background-color: white;
+  color: #454460;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 10px 0 rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   text-align: center;
-}
-.projects .projects-container .card .logo-container {
-  background-color: white;
-  display: flex;
-  border-radius: 20px;
-  padding: 5px;
 }
 
 .contact {
@@ -368,7 +397,7 @@ main {
   opacity: 0.9;
 }
 
-@media only screen and (min-height: 900px) {
+@media only screen and (min-height: 750px) {
   .hero-wrapper {
     justify-content: space-around;
   }
@@ -384,7 +413,7 @@ main {
   .side-navbar#myLinks {
     display: flex;
     transform: translateX(0%);
-    transition: 0.3s ease-in-out;
+    transition: transform ease-in-out;
   }
 
   #hamburger-button {
@@ -395,6 +424,7 @@ main {
     display: flex;
     justify-content: center;
     font-size: 1.5rem;
+    margin-top: 2rem;
   }
   .about .dot-background {
     margin-left: 50%;
@@ -428,7 +458,7 @@ main {
 }
 .contact {
   margin-top: 8rem;
-  height: 100vh;
+  height: 100%;
 }
 .contact .header {
   display: flex;
