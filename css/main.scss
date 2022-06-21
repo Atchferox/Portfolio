@@ -431,6 +431,16 @@ main {
   }
 }
 
+@media only screen and (min-height: 900px) {
+  .hero-wrapper {
+    justify-content: space-around;
+
+    .content {
+      margin-top: 0;
+    }
+  }
+}
+
 @media only screen and (min-width: 1200px) {
 
   main {
