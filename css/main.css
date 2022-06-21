@@ -85,7 +85,7 @@ main {
   height: 100vh;
   margin: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
@@ -98,6 +98,7 @@ main {
   color: white;
 }
 .hero-wrapper .content {
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
