@@ -8,13 +8,15 @@ function navigation() {
     const observer = new IntersectionObserver(
       entries => {
 
-        document.querySelectorAll('.nav-item').forEach(link => {
-          link.classList.remove('active');
-        })
-
         const visibleSection = entries.filter(entry => entry.isIntersecting)[0];
         if (visibleSection) {
-          document.querySelector(`.nav-item[data-label=${visibleSection.target.id}]`).classList.add("active")
+          let activeLink = document.querySelector('.active');
+          let newLink = document.querySelector(`.nav-item[data-label=${visibleSection.target.id}]`)
+          if (activeLink !== newLink) {
+            activeLink.classList.remove('active');
+            newLink.classList.add('active');
+          }
+
         }
       }, { threshold: 1 })
 
@@ -24,16 +26,18 @@ function navigation() {
   } else if (width < 1200) {
     const observer = new IntersectionObserver(
       entries => {
-
-        document.querySelectorAll('.nav-item').forEach(link => {
-          link.classList.remove('active');
-        })
-
         const visibleSection = entries.filter(entry => entry.isIntersecting)[0];
         if (visibleSection) {
-          document.querySelector(`.nav-item[data-label=${visibleSection.target.id}]`).classList.add("active")
+          let activeLink = document.querySelector('.active');
+          let newLink = document.querySelector(`.nav-item[data-label=${visibleSection.target.id}]`)
+          if (activeLink !== newLink) {
+
+            activeLink.classList.remove('active');
+            newLink.classList.add('active');
+          }
+
         }
-      }, { threshold: 0.5 })
+      }, { threshold: 0.2 })
     sections.forEach(section => {
       observer.observe(section)
     })
